@@ -1,0 +1,401 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+button,html,input,select,textarea{color:#222}
+html{font-size:1em;line-height:1.4}
+::-moz-selection{background:#b3d4fc;text-shadow:none}
+::selection{background:#b3d4fc;text-shadow:none}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+audio,canvas,img,video{vertical-align:middle}
+fieldset{border:0;margin:0;padding:0}
+textarea{resize:vertical}
+.browsehappy{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0; position: absolute; width: 100%; top: -4px;}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#flickrSearch{
+	background-color: rgb(6, 12 ,21);
+	background-image: url(../img/background.jpg);
+	background-repeat: repeat-x;
+}
+
+#flickrSearch #wrapper{
+	width: 100%;
+	position: relative;
+	text-align: left;
+}
+#flickrSearch .loading { 
+    width: 100%;
+    text-align: center;
+}
+#flickrSearch .loading img{
+    width: auto;
+    max-height: 268px;
+}
+#flickrSearch .section {
+	width: 80%;
+	max-width: 900px;
+	margin: 0 auto 70px;
+	position: relative;
+	border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+#flickrSearch #header{ 
+	border-color: black;
+    border-width: 4px;
+	margin-bottom: 0;
+}
+#flickrSearch #footer{
+	height: 195px;
+	width: 100%;
+	background-color: rgb(29, 29, 29);
+}
+#flickrSearch .logo{ margin: 35px 0 40px; }
+
+#flickrSearch #search_box{
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+}
+#flickrSearch #search_box input[type="text"]{
+	float: left;
+	border: 1px solid rgb(145, 83, 83);
+	border-right: none;
+	padding: 7px 15px;
+	font-size: 12px;
+}
+#flickrSearch #search_box input[type="text"]:focus{ outline: none;}
+#flickrSearch #search_box button {
+	float: left;
+	cursor: pointer;
+	height: 30px;
+    padding: 0;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(145, 83, 83);
+	border-left: none;
+}
+
+#flickrSearch #carousel{
+    width: 100%;
+    height: 545px;
+    overflow: hidden;
+}
+#flickrSearch #carousel .container{
+    height: 545px;
+}
+#flickrSearch #carousel .container figure {
+	display: block;
+	margin: 0;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+#flickrSearch #carousel .container figure img {
+    height: auto;
+    max-height: 500px;
+}
+#flickrSearch #carousel .container figcaption { 
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+	color: white;
+	font-size: 11px;
+}
+#flickrSearch #carousel #controlls{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+}
+#flickrSearch #carousel #controlls .controll{
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	border-radius: 50%;
+	cursor: pointer;
+    background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, .4);
+}
+#flickrSearch #carousel #controlls .controll.left{ left: 10px;}
+#flickrSearch #carousel #controlls .controll.right{ right: 10px;}
+#flickrSearch #carousel #controlls .controll:hover{ background-color: rgb(0, 0, 0); }
+#flickrSearch #carousel #controlls .controll .arrow{
+    position: absolute;;
+    top: 13px;
+    height: 35px;
+    width: 20px;
+    background-image: url(../img/arrows.png);
+    background-repeat: no-repeat;
+}
+#flickrSearch #carousel #controlls .controll.left .arrow{
+    left: 18px;
+    background-position: 0 -35px;
+}
+#flickrSearch #carousel #controlls .controll.right .arrow{
+    left: 21px;
+    background-position: -20px -35px;
+}
+#flickrSearch #carousel #controlls .controll.left:hover .arrow{ background-position: 0 0;}
+#flickrSearch #carousel #controlls .controll.right:hover .arrow{ background-position: -20px 0;}
+
+
+#flickrSearch #social{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#flickrSearch #social .share_holder{
+    position: relative;
+    right: 0;
+	background-color: rgb(85, 9, 16);
+	cursor: pointer;
+	width: 55px;
+    height: 35px;
+}
+#flickrSearch #social .share_button{
+    display: block;;
+    height: 18px;
+    width: 36px;
+    position: absolute;
+    top: 9px;
+    left: 11px;
+    background-image: url(../img/share.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+#flickrSearch #social .share_button:hover{
+    background-position: 0 -18px;
+}
+#flickrSearch #social .tooltip{
+    position: absolute;
+    top: -82px;
+    left: -142px;
+    height: 75px;
+    width: 195px;
+    display: none;
+    background-color: rgb(102, 8, 0);
+    background-image: url(../img/social.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+#flickrSearch #social .tooltip:before, 
+#flickrSearch #social .tooltip:after{
+    content: '';       
+    width: 14px;
+    height: 14px;
+    background-color: rgb(102, 8, 0);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -7px;
+    right: 20px;
+    margin-left: -5px;
+    z-index: 11;
+}
+#flickrSearch .tooltip:after{
+    box-shadow: 2px 0px rgba(0, 0, 0, .5);
+    z-index: 9;
+}
+#flickrSearch #social .share_holder:hover .tooltip{
+    display: block;
+}
+
+#flickrSearch #image_grid{
+    min-height: 420px;
+	margin-bottom: 50px;
+}
+#flickrSearch #image_grid .grid_item{
+    position: relative;;
+	float:left;
+    cursor: pointer;
+	margin: 1% 0 1% 1.4%;
+	width: 18.72%;
+    height: 140px;
+    overflow: hidden;
+}
+#flickrSearch #image_grid .grid_item:first-child,
+#flickrSearch #image_grid .grid_item:nth-child(6),
+#flickrSearch #image_grid .grid_item:nth-child(11){ margin-left: 0; }
+#flickrSearch #image_grid .grid_item img{
+	width: 100%;
+	height: auto;
+}
+#flickrSearch #image_grid .grid_item:hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: inset 2px 2px rgb(252, 183, 18), inset -2px -2px rgb(252, 183, 18);
+}
+#flickrSearch #pagination{
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+	color: white;
+}
+#flickrSearch #pagination span{ 
+    margin: 0 3px;
+    cursor: pointer; 
+}
+#flickrSearch #pagination span:hover, 
+#flickrSearch #pagination span.active{ 
+    text-decoration: underline;;
+    color: rgb(252, 183, 18);
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+	#flickrSearch .grid_item {
+		margin: 1% 0 1% 0%;
+		width: 100%;
+	}
+}
+
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
