@@ -385,7 +385,7 @@
     * @param object data - object containing searchValue, per_page, page and loder element
   */
   var doSearch = function (data){
-    var flickr = new FlickrGettr("d654cb9bf3364181d856c7a7e45b3d2c"),
+    var flickr = new FlickrGettr("####"),
         _data = data || {},
         _options = {
           searchValue: _data.searchValue || 'consert',
